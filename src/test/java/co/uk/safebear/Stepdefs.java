@@ -21,5 +21,6 @@ public class Stepdefs {
 
     @Then("the user is informed that the login is successful")
     public void the_user_is_informed_that_the_login_is_successful() {
-
+// Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
 }}
