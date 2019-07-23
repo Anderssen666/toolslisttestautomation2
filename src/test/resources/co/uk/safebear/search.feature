@@ -6,9 +6,10 @@ Feature: Search
   Rules:
   * The User must be logged in
   * The User is able to search for all available tools
+  * The User is able to remove all available tools
 
   Glossary:
-  * User: Someone who wants to create a Tools List using our application
+  * User: Someone who wants to create or remove a Tools List using our application
   * Supporters: This is what the customer calls 'Admin' users.
 
   @high-impact
