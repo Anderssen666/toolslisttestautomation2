@@ -23,4 +23,52 @@ public class Stepdefs {
     public void the_user_is_informed_that_the_login_is_successful() {
 // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
-}}
+}
+    @Given("I have logged in successfully")
+    public void i_have_logged_in_successfully() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @When("I search for a valid tool name")
+    public void i_search_for_a_valid_tool_name() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("The tool is returned in the search results")
+    public void the_tool_is_returned_in_the_search_results() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Given("a tool is no longer used")
+    public void a_tool_is_no_longer_used() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @When("I select to delete the tool")
+    public void i_select_to_delete_the_tool() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("The tool is no longer available on the website")
+    public void the_tool_is_no_longer_available_on_the_website() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @When("I create a new tool with Name {string}, Use {string} and Website {string}")
+    public void i_create_a_new_tool_with_Name_Use_and_Website(String toolName, String toolUse, String website) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("The new tool is added to the website")
+    public void the_new_tool_is_added_to_the_website() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+}
