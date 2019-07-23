@@ -20,20 +20,13 @@ Feature: Search
   @high-impact
   Scenario: remove tool
     Given a tool is no longer used
-    When I select the delete option for the tool
-    Then The tool is no longer available
+    When I select to delete the tool
+    Then The tool is no longer available on the website
 
   @high-impact
-  Scenario: add tool
-    Given I want to add a new tool
-    When I select the new tool option
-    Then The new tool screen opens
-
-  @high-impact
-  Scenario Outline: new tool screen
-    Given I am on the new tool screen
-    When I can enter a Name "<toolname>", Use "<tooluse>" and Website "<website>" and confirm
-    Then The new tool is added
+  Scenario Outline: new tool
+    When I create a new tool with Name "<toolname>", Use "<tooluse>" and Website "<website>"
+    Then The new tool is added to the website
     Examples:
       | toolname | tooluse | website       |
       | tool1    | use1    | www.bbc.co.uk |
