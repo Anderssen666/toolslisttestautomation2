@@ -27,3 +27,4 @@ Feature: Login
     Given I am logged out
     When I enter username "attacker" and password "dontletmein"
     Then the user is informed that the login is unsuccessful
+
