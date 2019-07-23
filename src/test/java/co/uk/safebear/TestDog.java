@@ -34,11 +34,18 @@ public class TestDog {
         Rosie.updateVacs(false);
         Pepper.updateVacs(true);
 
-        Charlie.getVacs();
-        Georgie.getVacs();
-        Rosie.getVacs();
-        Pepper.getVacs();
+        System.out.println("Charlie is vaccinated: " + Charlie.getVacs());
+        System.out.println("Georgie is vaccinated: " + Georgie.getVacs());
+        System.out.println("Rosie is vaccinated: " + Rosie.getVacs());
+        System.out.println("Pepper is vaccinated: " + Pepper.getVacs());
+
+        System.out.println ("Charlie is a " + Charlie.getBreed());
+
+        Charlie.bark();
+
     }
+
+
 
     }
 

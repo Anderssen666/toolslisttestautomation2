@@ -18,6 +18,10 @@ public class Dog {
         breed = setBreed;
     }
 
+    public String getBreed (){
+        return breed;
+    }
+
     public void updateVacs (boolean vacStatus) {
         isVaccainated = vacStatus;
     }
@@ -25,5 +29,9 @@ public class Dog {
     public boolean getVacs(){
         return isVaccainated;
     }
+    public void bark(){
+        System.out.println("Woof, woof");
+    }
+
     }
 
