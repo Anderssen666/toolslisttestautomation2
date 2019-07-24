@@ -17,7 +17,7 @@ public class Driver {
         return URL;
     }
     public static WebDriver getDriver(){
-        ChromeOptions chromeOptions;
+        ChromeOptions chromeOptions = new ChromeOptions();
         FirefoxOptions firefoxOptions;
 
         switch (BROWSER.toUpperCase()){
@@ -37,12 +37,19 @@ public class Driver {
             case "CHROME_HUB":
 
                 DesiredCapabilities cap = new DesiredCapabilities();
-                ChromeOptions chromeOptions2 = new ChromeOptions();
-
-                cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions2);
+                cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
                 cap.setBrowserName("chrome");
 
                 return new RemoteWebDriver(cap);
+
+            case "CHROME_HEADLESS":
+                System.out.println("Executing on Chrome Headless");
+                chromeOptions.addArguments("headless");
+                chromeOptions.addArguments("window-size=1920,1080");
+                chromeOptions.addArguments("start maximized");
+                WebDriverManager.chromedriver().setup();
+
+                return new ChromeDriver(chromeOptions);
 
                 default:
                     throw new IllegalArgumentException("The browser type is undefined");
