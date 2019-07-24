@@ -53,24 +53,29 @@ public class Stepdefs {
 assertThat("Login failed or the Login Successful message didn't appear", toolsPage.checkForLoginSuccessfulMessage(), containsString("Login Successful"));
 }
 
-
-
-@Given("I have logged in successfully")
- public void i_have_logged_in_successfully() {
-        // Write code here that turns the phrase above into concrete actions
-throw new cucumber.api.PendingException();
- }
-
- @When("I search for a valid tool name")
- public void i_search_for_a_valid_tool_name() {
-        // Write code here that turns the phrase above into concrete actions
-      throw new cucumber.api.PendingException();}
-
-   @Then("The tool is returned in the search results")
-    public void the_tool_is_returned_in_the_search_results() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    @When("I search for a valid tool name")
+    public void i_search_for_a_valid_tool_name() {
+        ToolsPage.searchForTool(toolname);
+        ToolsPage.clickSearchButton();
+        assertThat("No Results returned", toolsPage.checkIfSearchSuccessful(),containsString("No tools found matching your search criteria"));
     }
+
+    @Then("The tool is returned in the search results")
+    public void the_tool_is_returned_in_the_search_results() {
+        assertThat("Result not returned", toolsPage.checkSearchResults(),containsString("Selenium"));
+    }
+
+
+
+
+    @Then("the user is informed that the login is unsuccessful")
+    public void the_user_is_informed_that_the_login_is_unsuccessful() {
+        assertThat("Login didn't fail", loginPage.checkForFailedMessage(), containsString("Username or Password is incorrect"));
+    }
+
+
+
+
 
    @Given("a tool is no longer used")
     public void a_tool_is_no_longer_used() {

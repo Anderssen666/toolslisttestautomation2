@@ -12,13 +12,15 @@ Feature: Search
   * User: Someone who wants to create or remove a Tools List using our application
   * Supporters: This is what the customer calls 'Admin' users.
 
-  @high-impact
-  Scenario: search for a tool
-    Given I have logged in successfully
-    When I search for a valid tool name
+ @high-impact
+  Scenario Outline: search for a tool
+    When I search for tool "<name>"
     Then The tool is returned in the search results
+    Examples:
+    | name     |
+    | Selenium |
 
-  @high-impact
+ @high-impact
   Scenario: remove tool
     Given a tool is no longer used
     When I select to delete the tool

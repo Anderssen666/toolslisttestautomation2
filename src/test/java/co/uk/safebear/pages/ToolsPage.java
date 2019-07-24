@@ -12,6 +12,7 @@ public class ToolsPage {
 
     ToolsPageLocators locators = new ToolsPageLocators();
 
+
     public String getPageTitle() {
         return driver.getTitle();
     }
@@ -20,5 +21,16 @@ public class ToolsPage {
         return driver.findElement(locators.getSuccessfulLoginMessage()).getText();
     }
 
+    public void searchForTool (String toolname) {driver.findElement(locators.getSearchField()).sendKeys(toolname);}
+
+    public void clickSearchButton () {driver.findElement(locators.getSearchButton()).click();}
+
+    public String checkIfSearchSuccessful () {
+        return driver.findElement(locators.getNoResultsReturnedMessage()).getText();
+    }
+
+    public String checkSearchResults () {
+        return driver.findElement(locators.getSearchResult()).getText();
+    }
 }
 
