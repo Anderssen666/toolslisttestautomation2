@@ -10,14 +10,15 @@ public class ToolsPage {
     @NonNull
     WebDriver driver;
 
-ToolsPageLocators locators = new ToolsPageLocators();
+    ToolsPageLocators locators = new ToolsPageLocators();
 
-public String getPageTitle(){
-    return driver.getTitle();
-}
-public String checkForLoginSuccessfulMessage (){
-    return driver.findElement(locators.getSuccessfulLoginMessage()).getText();
-}
+    public String getPageTitle() {
+        return driver.getTitle();
+    }
+
+    public String checkForLoginSuccessfulMessage() {
+        return driver.findElement(locators.getSuccessfulLoginMessage()).getText();
+    }
 
 }
 

@@ -12,23 +12,23 @@ public class LoginPage {
 
     LoginPageLocators locators = new LoginPageLocators();
 
-    public String getPageTitle(){
+    public String getPageTitle() {
         return driver.getTitle();
     }
 
-    public void enterUsername(String userName){
+    public void enterUsername(String userName) {
         driver.findElement(locators.getUsernameLocator()).sendKeys(userName);
     }
 
-    public void enterPassword(String passWord){
+    public void enterPassword(String passWord) {
         driver.findElement(locators.getPasswordLocator()).sendKeys(passWord);
     }
 
-    public void clickLoginButton(){
+    public void clickLoginButton() {
         driver.findElement(locators.getLoginButtonLocator()).click();
     }
 
-    public String checkForFailedMessage(){
+    public String checkForFailedMessage() {
         return driver.findElement(locators.getWarningMessage()).getText();
     }
 }
