@@ -34,7 +34,7 @@ public class Driver {
                 return new FirefoxDriver();
 
 
-            case "CHROME_HUB":
+            case "CHROME_NODE":
 
                 DesiredCapabilities cap = new DesiredCapabilities();
                 cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
