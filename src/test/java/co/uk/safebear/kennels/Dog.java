@@ -4,7 +4,7 @@ public class Dog {
     public String name;
     public String breed;
     public int age;
-    public boolean isVaccainated;
+    public boolean isVaccinated;
 
     public void setAge (int newAge)
     {age = newAge;
@@ -23,11 +23,11 @@ public class Dog {
     }
 
     public void updateVacs (boolean vacStatus) {
-        isVaccainated = vacStatus;
+        isVaccinated = vacStatus;
     }
 
     public boolean getVacs(){
-        return isVaccainated;
+        return isVaccinated;
     }
     public void bark(){
         System.out.println("Woof, woof");
