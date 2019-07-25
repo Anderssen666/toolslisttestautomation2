@@ -1,0 +1,4 @@
+co\uk\safebear\pages\LoginPage.class
+co\uk\safebear\pages\ToolsPage.class
+co\uk\safebear\pages\locators\LoginPageLocators.class
+co\uk\safebear\pages\locators\ToolsPageLocators.class
