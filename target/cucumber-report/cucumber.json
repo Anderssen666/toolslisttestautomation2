@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 6224685300,
+              "duration": 5822239000,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 2690489300,
+              "duration": 578632200,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 11803699,
+              "duration": 459521900,
               "status": "passed"
             },
             "line": 16,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 1254967400,
+              "duration": 2004014600,
               "status": "passed"
             },
             "line": 17,
@@ -68,7 +68,7 @@
           },
           {
             "result": {
-              "duration": 61517100,
+              "duration": 462887400,
               "status": "passed"
             },
             "line": 18,
@@ -89,7 +89,7 @@
         "before": [
           {
             "result": {
-              "duration": 3555370200,
+              "duration": 3860306300,
               "status": "passed"
             },
             "match": {
@@ -104,7 +104,7 @@
         "after": [
           {
             "result": {
-              "duration": 2670228900,
+              "duration": 567112700,
               "status": "passed"
             },
             "match": {
@@ -117,7 +117,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9998401,
+              "duration": 456466300,
               "status": "passed"
             },
             "line": 16,
@@ -129,7 +129,7 @@
           },
           {
             "result": {
-              "duration": 1058270601,
+              "duration": 1809709300,
               "status": "passed"
             },
             "line": 17,
@@ -151,7 +151,7 @@
           },
           {
             "result": {
-              "duration": 47520400,
+              "duration": 470902100,
               "status": "passed"
             },
             "line": 18,
@@ -172,7 +172,7 @@
         "before": [
           {
             "result": {
-              "duration": 3515490101,
+              "duration": 3846840500,
               "status": "passed"
             },
             "match": {
@@ -187,7 +187,7 @@
         "after": [
           {
             "result": {
-              "duration": 2668401799,
+              "duration": 568799600,
               "status": "passed"
             },
             "match": {
@@ -200,7 +200,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9760400,
+              "duration": 427426700,
               "status": "passed"
             },
             "line": 16,
@@ -212,7 +212,7 @@
           },
           {
             "result": {
-              "duration": 1189152299,
+              "duration": 2267225900,
               "status": "passed"
             },
             "line": 17,
@@ -234,13 +234,96 @@
           },
           {
             "result": {
-              "duration": 46895000,
+              "duration": 458225600,
               "status": "passed"
             },
             "line": 18,
             "name": "the user is informed that the login is successful",
             "match": {
               "location": "Stepdefs.the_user_is_informed_that_the_login_is_successful()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@high-impact"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3807974900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Stepdefs.setUp()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "an invalid user attempts to log in",
+        "description": "",
+        "id": "login;an-invalid-user-attempts-to-log-in",
+        "after": [
+          {
+            "result": {
+              "duration": 592441300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Stepdefs.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 438448800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I am logged out",
+            "match": {
+              "location": "Stepdefs.i_am_logged_out()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 323320700,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I enter username \"attacker\" and password \"dontletmein\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"attacker\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"dontletmein\"",
+                  "offset": 41
+                }
+              ],
+              "location": "Stepdefs.i_enter_username_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 470141400,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user is informed that the login is unsuccessful",
+            "match": {
+              "location": "Stepdefs.the_user_is_informed_that_the_login_is_unsuccessful()"
             },
             "keyword": "Then "
           }
@@ -266,7 +349,7 @@
         "before": [
           {
             "result": {
-              "duration": 3560412501,
+              "duration": 3806030500,
               "status": "passed"
             },
             "match": {
@@ -274,14 +357,14 @@
             }
           }
         ],
-        "line": 16,
-        "name": "search for a tool",
+        "line": 22,
+        "name": "i search for a valid tool name()",
         "description": "",
-        "id": "search;search-for-a-tool",
+        "id": "search;i-search-for-a-valid-tool-name();;2",
         "after": [
           {
             "result": {
-              "duration": 2667633900,
+              "duration": 574960700,
               "status": "passed"
             },
             "match": {
@@ -290,37 +373,52 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat co.uk.safebear.Stepdefs.i_have_logged_in_successfully(Stepdefs.java:61)\r\n\tat ✽.I have logged in successfully(classpath:co/uk/safebear/search.feature:17)\r\n",
-              "duration": 3067800,
-              "status": "pending"
+              "duration": 2035794900,
+              "status": "passed"
             },
             "line": 17,
-            "name": "I have logged in successfully",
+            "name": "I am already logged in using username \"tester\" and password \"letmein\"",
             "match": {
-              "location": "Stepdefs.i_have_logged_in_successfully()"
+              "arguments": [
+                {
+                  "val": "\"tester\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"letmein\"",
+                  "offset": 60
+                }
+              ],
+              "location": "Stepdefs.i_am_already_logged_in_using_username_and_password(String,String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 13601,
-              "status": "skipped"
+              "duration": 942059700,
+              "status": "passed"
             },
             "line": 18,
-            "name": "I search for a valid tool name",
+            "name": "I search for a valid tool name \"Selenium\"",
             "match": {
-              "location": "Stepdefs.i_search_for_a_valid_tool_name()"
+              "arguments": [
+                {
+                  "val": "\"Selenium\"",
+                  "offset": 31
+                }
+              ],
+              "location": "Stepdefs.i_search_for_a_valid_tool_name(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 9300,
-              "status": "skipped"
+              "duration": 453012400,
+              "status": "passed"
             },
             "line": 19,
             "name": "The tool is returned in the search results",
@@ -340,7 +438,7 @@
         "before": [
           {
             "result": {
-              "duration": 3668421400,
+              "duration": 3806246700,
               "status": "passed"
             },
             "match": {
@@ -348,88 +446,14 @@
             }
           }
         ],
-        "line": 22,
-        "name": "remove tool",
-        "description": "",
-        "id": "search;remove-tool",
-        "after": [
-          {
-            "result": {
-              "duration": 2668357401,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Stepdefs.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat co.uk.safebear.Stepdefs.a_tool_is_no_longer_used(Stepdefs.java:78)\r\n\tat ✽.a tool is no longer used(classpath:co/uk/safebear/search.feature:23)\r\n",
-              "duration": 280300,
-              "status": "pending"
-            },
-            "line": 23,
-            "name": "a tool is no longer used",
-            "match": {
-              "location": "Stepdefs.a_tool_is_no_longer_used()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 9300,
-              "status": "skipped"
-            },
-            "line": 24,
-            "name": "I select to delete the tool",
-            "match": {
-              "location": "Stepdefs.i_select_to_delete_the_tool()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 10399,
-              "status": "skipped"
-            },
-            "line": 25,
-            "name": "The tool is no longer available on the website",
-            "match": {
-              "location": "Stepdefs.the_tool_is_no_longer_available_on_the_website()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@high-impact"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 3684267900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Stepdefs.setUp()"
-            }
-          }
-        ],
-        "line": 33,
+        "line": 37,
         "name": "new tool",
         "description": "",
         "id": "search;new-tool;;2",
         "after": [
           {
             "result": {
-              "duration": 2673294300,
+              "duration": 563884400,
               "status": "passed"
             },
             "match": {
@@ -442,11 +466,32 @@
         "steps": [
           {
             "result": {
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat co.uk.safebear.Stepdefs.i_create_a_new_tool_with_Name_Use_and_Website(Stepdefs.java:96)\r\n\tat ✽.I create a new tool with Name \"tool1\", Use \"use1\" and Website \"www.bbc.co.uk\"(classpath:co/uk/safebear/search.feature:29)\r\n",
-              "duration": 356601,
-              "status": "pending"
+              "duration": 2019823000,
+              "status": "passed"
             },
-            "line": 29,
+            "line": 32,
+            "name": "I am already logged in using username \"tester\" and password \"letmein\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tester\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"letmein\"",
+                  "offset": 60
+                }
+              ],
+              "location": "Stepdefs.i_am_already_logged_in_using_username_and_password(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1520894400,
+              "status": "passed"
+            },
+            "line": 33,
             "name": "I create a new tool with Name \"tool1\", Use \"use1\" and Website \"www.bbc.co.uk\"",
             "match": {
               "arguments": [
@@ -469,162 +514,10 @@
           },
           {
             "result": {
-              "duration": 15100,
-              "status": "skipped"
-            },
-            "line": 30,
-            "name": "The new tool is added to the website",
-            "match": {
-              "location": "Stepdefs.the_new_tool_is_added_to_the_website()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@high-impact"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 3427072899,
+              "duration": 451117200,
               "status": "passed"
             },
-            "match": {
-              "location": "Stepdefs.setUp()"
-            }
-          }
-        ],
-        "line": 34,
-        "name": "new tool",
-        "description": "",
-        "id": "search;new-tool;;3",
-        "after": [
-          {
-            "result": {
-              "duration": 2672275900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Stepdefs.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat co.uk.safebear.Stepdefs.i_create_a_new_tool_with_Name_Use_and_Website(Stepdefs.java:96)\r\n\tat ✽.I create a new tool with Name \"tool2\", Use \"use2\" and Website \"www.abc.co.uk\"(classpath:co/uk/safebear/search.feature:29)\r\n",
-              "duration": 479200,
-              "status": "pending"
-            },
-            "line": 29,
-            "name": "I create a new tool with Name \"tool2\", Use \"use2\" and Website \"www.abc.co.uk\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"tool2\"",
-                  "offset": 30
-                },
-                {
-                  "val": "\"use2\"",
-                  "offset": 43
-                },
-                {
-                  "val": "\"www.abc.co.uk\"",
-                  "offset": 62
-                }
-              ],
-              "location": "Stepdefs.i_create_a_new_tool_with_Name_Use_and_Website(String,String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 11799,
-              "status": "skipped"
-            },
-            "line": 30,
-            "name": "The new tool is added to the website",
-            "match": {
-              "location": "Stepdefs.the_new_tool_is_added_to_the_website()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@high-impact"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 3609677701,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Stepdefs.setUp()"
-            }
-          }
-        ],
-        "line": 35,
-        "name": "new tool",
-        "description": "",
-        "id": "search;new-tool;;4",
-        "after": [
-          {
-            "result": {
-              "duration": 2670972000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Stepdefs.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat co.uk.safebear.Stepdefs.i_create_a_new_tool_with_Name_Use_and_Website(Stepdefs.java:96)\r\n\tat ✽.I create a new tool with Name \"tool3\", Use \"use3\" and Website \"www.cde.co.uk\"(classpath:co/uk/safebear/search.feature:29)\r\n",
-              "duration": 489800,
-              "status": "pending"
-            },
-            "line": 29,
-            "name": "I create a new tool with Name \"tool3\", Use \"use3\" and Website \"www.cde.co.uk\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"tool3\"",
-                  "offset": 30
-                },
-                {
-                  "val": "\"use3\"",
-                  "offset": 43
-                },
-                {
-                  "val": "\"www.cde.co.uk\"",
-                  "offset": 62
-                }
-              ],
-              "location": "Stepdefs.i_create_a_new_tool_with_Name_Use_and_Website(String,String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 10300,
-              "status": "skipped"
-            },
-            "line": 30,
+            "line": 34,
             "name": "The new tool is added to the website",
             "match": {
               "location": "Stepdefs.the_new_tool_is_added_to_the_website()"

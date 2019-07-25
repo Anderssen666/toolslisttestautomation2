@@ -3,6 +3,7 @@ package co.uk.safebear;
 import co.uk.safebear.pages.LoginPage;
 import co.uk.safebear.pages.ToolsPage;
 import co.uk.safebear.utils.Driver;
+import co.uk.safebear.utils.Screenshots;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -27,7 +28,7 @@ public class Stepdefs {
     }
 
     @After
-    public void tearDown() {
+    public void tearDown(){
         try {
             Thread.sleep(Integer.parseInt(System.getProperty("sleep", "2000")));
         } catch (InterruptedException e) {
@@ -40,6 +41,7 @@ public class Stepdefs {
     @Given("I am logged out")
     public void i_am_logged_out() {
         assertEquals("We're not on the Login Page", "Login Page", loginPage.getPageTitle());
+        Screenshots.capturescreenshot(driver, "loginscreenshots");
     }
 
     @When("I enter username {string} and password {string}")
@@ -47,17 +49,20 @@ public class Stepdefs {
         loginPage.enterUsername(username);
         loginPage.enterPassword(password);
         loginPage.clickLoginButton();
+
     }
 
     @Then("the user is informed that the login is successful")
     public void the_user_is_informed_that_the_login_is_successful() {
         assertThat("Login failed or the Login Successful message didn't appear", toolsPage.checkForLoginSuccessfulMessage(), containsString("Login Successful"));
-    }
+        Screenshots.capturescreenshot(driver, Screenshots.generateScreenShotFileName());}
+
 
     @Then("the user is informed that the login is unsuccessful")
     public void the_user_is_informed_that_the_login_is_unsuccessful() {
         assertThat("Login didn't fail", loginPage.checkForFailedMessage(), containsString("Username or Password is incorrect"));
-    }
+        Screenshots.capturescreenshot(driver, Screenshots.generateScreenShotFileName());}
+
 
 
     @Given("I am already logged in using username {string} and password {string}")
@@ -72,11 +77,13 @@ public class Stepdefs {
     public void i_search_for_a_valid_tool_name(String toolname) {
         toolsPage.searchForTool(toolname);
         toolsPage.clickSearchButton();
+        Screenshots.capturescreenshot(driver, Screenshots.generateScreenShotFileName());
     }
 
     @Then("The tool is returned in the search results")
     public void the_tool_is_returned_in_the_search_results() {
         assertThat("Result not returned", toolsPage.checkSearchResults(), containsString("Selenium"));
+        Screenshots.capturescreenshot(driver, Screenshots.generateScreenShotFileName());;
     }
 
     @When("I create a new tool with Name {string}, Use {string} and Website {string}")
@@ -86,11 +93,13 @@ public class Stepdefs {
         toolsPage.enterNewToolUse(toolUse);
         toolsPage.enterNewToolWebsite(toolwebsite);
         toolsPage.clickNewToolAcceptButton();
+        Screenshots.capturescreenshot(driver, Screenshots.generateScreenShotFileName());
     }
 
     @Then("The new tool is added to the website")
     public void the_new_tool_is_added_to_the_website() {
         assertThat("Tool not created", toolsPage.checkNewToolSuccessMessage(), containsString("The new tool has been successfully created"));
+        Screenshots.capturescreenshot(driver, Screenshots.generateScreenShotFileName());
     }
 
     @Given("a tool is no longer used")

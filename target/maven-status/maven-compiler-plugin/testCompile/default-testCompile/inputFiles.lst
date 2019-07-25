@@ -1,7 +1,13 @@
 C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\kennels\Dog.java
-C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\utils\Driver.java
+C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\pages\LoginPage.java
 C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\RunCucumberTest.java
-C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\kennels\Cat.java
 C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\TestCat.java
+C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\pages\locators\ToolsPageLocators.java
 C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\TestDog.java
+C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\pages\locators\LoginPageLocators.java
+C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\utils\Screenshots.java
+C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\pages\ToolsPage.java
+C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\utils\Driver.java
+C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\kennels\Cat.java
+C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\utils\Waits.java
 C:\Users\User\IdeaProjects\toolslisttestautomation2\src\test\java\co\uk\safebear\Stepdefs.java

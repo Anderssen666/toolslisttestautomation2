@@ -12,13 +12,16 @@ Feature: Search
   * User: Someone who wants to create or remove a Tools List using our application
   * Supporters: This is what the customer calls 'Admin' users.
 
-  @high-impact
-  Scenario: search for a tool
-    Given I have logged in successfully
-    When I search for a valid tool name
+ @high-impact
+  Scenario Outline: i search for a valid tool name()
+    Given I am already logged in using username "tester" and password "letmein"
+    When I search for a valid tool name "<toolname>"
     Then The tool is returned in the search results
+    Examples:
+    | toolname     |
+    | Selenium |
 
-  @high-impact
+ @to-do
   Scenario: remove tool
     Given a tool is no longer used
     When I select to delete the tool
@@ -26,10 +29,9 @@ Feature: Search
 
   @high-impact
   Scenario Outline: new tool
-    When I create a new tool with Name "<toolname>", Use "<tooluse>" and Website "<website>"
+    Given I am already logged in using username "tester" and password "letmein"
+    When I create a new tool with Name "<newToolName>", Use "<toolUse>" and Website "<toolwebsite>"
     Then The new tool is added to the website
     Examples:
-      | toolname | tooluse | website       |
+      | newToolName | toolUse | toolwebsite       |
       | tool1    | use1    | www.bbc.co.uk |
-      | tool2    | use2    | www.abc.co.uk |
-      | tool3    | use3    | www.cde.co.uk |

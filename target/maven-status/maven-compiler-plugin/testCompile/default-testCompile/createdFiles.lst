@@ -1,4 +1,13 @@
+co\uk\safebear\utils\Driver.class
+co\uk\safebear\RunCucumberTest.class
 co\uk\safebear\pages\LoginPage.class
+co\uk\safebear\kennels\Cat.class
+co\uk\safebear\TestDog.class
+co\uk\safebear\Stepdefs.class
+co\uk\safebear\kennels\Dog.class
 co\uk\safebear\pages\ToolsPage.class
+co\uk\safebear\TestCat.class
+co\uk\safebear\utils\Waits.class
 co\uk\safebear\pages\locators\LoginPageLocators.class
 co\uk\safebear\pages\locators\ToolsPageLocators.class
+co\uk\safebear\utils\Screenshots.class
