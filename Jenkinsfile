@@ -44,5 +44,13 @@ pipeline {
             }
         }
 
-    }
-}
+
+        stage('API Testing') {
+            steps {
+
+                newman run "src/apiTests/New Tool.postman_collection.json" -e "src/apiTests/ToolsList.postman_environment.json";
+
+            }
+
+        }
+    }}
