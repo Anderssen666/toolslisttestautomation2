@@ -21,16 +21,44 @@ public class ToolsPage {
         return driver.findElement(locators.getSuccessfulLoginMessage()).getText();
     }
 
-    public void searchForTool (String toolname) {driver.findElement(locators.getSearchField()).sendKeys(toolname);}
+    public void searchForTool(String toolname) {
+        driver.findElement(locators.getSearchField()).sendKeys(toolname);
+    }
 
-    public void clickSearchButton () {driver.findElement(locators.getSearchButton()).click();}
+    public void clickSearchButton() {
+        driver.findElement(locators.getSearchButton()).click();
+    }
 
-    public String checkIfSearchSuccessful () {
+    public String checkIfSearchSuccessful() {
         return driver.findElement(locators.getNoResultsReturnedMessage()).getText();
     }
 
-    public String checkSearchResults () {
+    public String checkSearchResults() {
         return driver.findElement(locators.getSearchResult()).getText();
     }
-}
 
+    public void clickNewToolButton() {
+        driver.findElement(locators.getNewToolButton()).click();
+
+    }
+
+    public void enterNewToolName(String newToolName){
+        driver.findElement(locators.getNewToolNameField()).sendKeys(newToolName);
+    }
+
+    public void enterNewToolUse(String toolUse){
+        driver.findElement(locators.getNewToolUseField()).sendKeys(toolUse);
+    }
+
+    public void enterNewToolWebsite (String toolwebsite) {
+        driver.findElement(locators.getNewToolWebField()).sendKeys(toolwebsite);
+    }
+
+    public void clickNewToolAcceptButton () {
+        driver.findElement(locators.getAcceptNewToolButton()).click();
+    }
+
+    public String checkNewToolSuccessMessage () {
+        return driver.findElement(locators.getNewToolSuccessMessage()).getText();
+    }
+}
