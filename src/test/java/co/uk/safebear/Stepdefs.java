@@ -53,11 +53,24 @@ public class Stepdefs {
 assertThat("Login failed or the Login Successful message didn't appear", toolsPage.checkForLoginSuccessfulMessage(), containsString("Login Successful"));
 }
 
-    @When("I search for a valid tool name")
+    @Then("the user is informed that the login is unsuccessful")
+    public void the_user_is_informed_that_the_login_is_unsuccessful() {
+        assertThat("Login didn't fail", loginPage.checkForFailedMessage(), containsString("Username or Password is incorrect"));
+    }
+
+
+    @Given("I am already logged in using username {string} and password {string}")
+    public void i_am_already_logged_in_using_username_and_password(String username, String password){
+        loginPage.enterUsername(username);
+        loginPage.enterPassword(password);
+        loginPage.clickLoginButton();
+        assertThat("Login failed or the Login Successful message didn't appear", toolsPage.checkForLoginSuccessfulMessage(), containsString("Login Successful"));
+    }
+
+    @When("I search for a valid tool name {string}")
     public void i_search_for_a_valid_tool_name(String toolname) {
         toolsPage.searchForTool(toolname);
         toolsPage.clickSearchButton();
-        assertThat("No Results returned", toolsPage.checkIfSearchSuccessful(),containsString("No tools found matching your search criteria"));
     }
 
     @Then("The tool is returned in the search results")
@@ -65,13 +78,6 @@ assertThat("Login failed or the Login Successful message didn't appear", toolsPa
         assertThat("Result not returned", toolsPage.checkSearchResults(),containsString("Selenium"));
     }
 
-
-
-
-    @Then("the user is informed that the login is unsuccessful")
-    public void the_user_is_informed_that_the_login_is_unsuccessful() {
-        assertThat("Login didn't fail", loginPage.checkForFailedMessage(), containsString("Username or Password is incorrect"));
-    }
 
 
 

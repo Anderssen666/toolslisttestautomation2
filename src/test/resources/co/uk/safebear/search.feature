@@ -13,8 +13,9 @@ Feature: Search
   * Supporters: This is what the customer calls 'Admin' users.
 
  @high-impact
-  Scenario Outline: i_search_for_a_valid_tool_name()
-    When I search for a valid "<toolname>"
+  Scenario Outline: i search for a valid tool name()
+    Given I am already logged in using username "tester" and password "letmein"
+    When I search for a valid tool name "<toolname>"
     Then The tool is returned in the search results
     Examples:
     | toolname     |
@@ -33,5 +34,3 @@ Feature: Search
     Examples:
       | toolname | tooluse | website       |
       | tool1    | use1    | www.bbc.co.uk |
-      | tool2    | use2    | www.abc.co.uk |
-      | tool3    | use3    | www.cde.co.uk |
