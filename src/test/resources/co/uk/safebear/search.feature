@@ -13,11 +13,11 @@ Feature: Search
   * Supporters: This is what the customer calls 'Admin' users.
 
  @high-impact
-  Scenario Outline: search for a tool
-    When I search for tool "<name>"
+  Scenario Outline: i_search_for_a_valid_tool_name()
+    When I search for a valid "<toolname>"
     Then The tool is returned in the search results
     Examples:
-    | name     |
+    | toolname     |
     | Selenium |
 
  @high-impact

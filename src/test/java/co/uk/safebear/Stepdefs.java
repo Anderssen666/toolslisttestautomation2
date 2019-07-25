@@ -54,9 +54,9 @@ assertThat("Login failed or the Login Successful message didn't appear", toolsPa
 }
 
     @When("I search for a valid tool name")
-    public void i_search_for_a_valid_tool_name() {
-        ToolsPage.searchForTool(toolname);
-        ToolsPage.clickSearchButton();
+    public void i_search_for_a_valid_tool_name(String toolname) {
+        toolsPage.searchForTool(toolname);
+        toolsPage.clickSearchButton();
         assertThat("No Results returned", toolsPage.checkIfSearchSuccessful(),containsString("No tools found matching your search criteria"));
     }
 
