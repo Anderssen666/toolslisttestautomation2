@@ -12,6 +12,7 @@ public class LoginPage {
 
     LoginPageLocators locators = new LoginPageLocators();
 
+
     public String getPageTitle() {
         return driver.getTitle();
     }
