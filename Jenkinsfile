@@ -48,7 +48,7 @@ pipeline {
         stage('API Testing') {
             steps {
 
-                bat "newman run \"src/apiTests/New Tool.postman_collection.json\" -e \"src/apiTests/ToolsList.postman_environment.json\"";
+                bat "newman run 'src/apiTests/New Tool.postman_collection.json' -e 'src/apiTests/ToolsList.postman_environment.json'";
 
             }
 
