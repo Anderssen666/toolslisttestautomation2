@@ -19,4 +19,7 @@ private By acceptNewToolButton = By.xpath("/html/body/div/form/div/button");
 
 private By newToolSuccessMessage = By.xpath("/html/body/div/div[2]");
 
+
+private By allTableData = By.tagName("td");
+
 }

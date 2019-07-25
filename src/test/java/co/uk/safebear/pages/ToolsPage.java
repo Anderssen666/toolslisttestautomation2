@@ -4,6 +4,9 @@ import co.uk.safebear.pages.locators.ToolsPageLocators;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 public class ToolsPage {
@@ -61,4 +64,21 @@ public class ToolsPage {
     public String checkNewToolSuccessMessage () {
         return driver.findElement(locators.getNewToolSuccessMessage()).getText();
     }
+
+    public boolean checkForToolInTable(String toolnameToCheckFor){
+
+        List<WebElement> tableData;
+
+        tableData = driver.findElements(locators.getAllTableData());
+
+        for(int i=0; i < tableData.size(); i++){
+
+            if(tableData.get(i).getText() == toolnameToCheckFor){
+                return true;
+            }
+
+        }
+        return false;
+    }
+
 }
